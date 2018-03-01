@@ -33,7 +33,7 @@ This is a dad joke app. It has the following:
 
 ## Bronze
 
-* ability to create account to sign in
+* ability to create account to sign in _passsporttttt/look at the twittter thingy_
 * associated jokes to users
 * edit your jokes
 
@@ -56,7 +56,7 @@ This is a dad joke app. It has the following:
 4.  inside index.js at it's most simple
     require all our dependencies
 
-    ````const express = require("express");
+    ```const express = require("express");
     // create and set up our express app
     const app = express();
 
@@ -66,8 +66,8 @@ This is a dad joke app. It has the following:
     })
 
     // start our server
-    app.listen(3000, () => console.log("This is working on port 3000" ```
-    ````
+    app.listen(3000, () => console.log("This is working on port 3000"
+    ```
 
 5.  Render a view
     *npm install hbs --save
@@ -112,3 +112,5 @@ This is a dad joke app. It has the following:
     touch controllers/joke.js
     do what i did in joke.js
 12. install body parser
+
+then i fell off.

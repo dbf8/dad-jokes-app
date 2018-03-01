@@ -15,7 +15,7 @@ app.use(parser.urlencoded({ extended: true }))
 // define our routes:
 app.get('/', (req, res) => {
   Joke.find({}).then(jokes => {
-    res.render('index', jokes)
+    res.render('index', { jokes })
   })
   //   res.render('index')
 })
