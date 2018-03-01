@@ -75,18 +75,40 @@ This is a dad joke app. It has the following:
     const hbs = require('hbs')
     *configure express to use hbs
     app.set('view engine', 'hbs')
-    *touch a views folder
+    *mkdir views folder
     touch layout.hbs
     touch index.hbs
-    \*render the index view in index.js -> app.get function
+    render the index view in index.js -> app.get function
 6.  mkdir DB
     touch db/connection.js
     npm install mongoose --save
     in connection.js
-    ````const mongoose = require('mongoose')
-    mongoose.connect('mongodb://localhost/dad_jokes')```
-    create promise: ```mongoose.Promise = Promise```
-    export module so it can be availble globally: module.exports = mongoose
-    ````
-7.
-8.
+    `````const mongoose = require('mongoose')
+    mongoose.connect('mongodb://localhost/dad_jokes')````
+    create promise: ````mongoose.Promise = Promise````
+    export module so it can be available globally: ````module.exports = mongoose
+    `````
+7.  mkdir models
+    touch models/Joke.js (UPPERCASE, models are uppercase)
+    in Joke!
+    const mongoose = require ('../db/connection')
+    see Joke.js
+    see: mongoosejs.com/docs/guide.html
+8.  seed our jokes
+    touch db/seed.js
+    node db/seed
+9.  in index.js:
+    const Joke = require('./models/Joke')
+    replace routes with:
+    ```app.get('/', (req, res) => {
+        Joke.find({}).then(jokes => {
+          res.render('index', jokes)
+          })
+      })
+    ```
+    node db/seed
+10. go to index.hbs (do stuff there)
+11. mkdir controllers
+    touch controllers/joke.js
+    do what i did in joke.js
+12. install body parser
