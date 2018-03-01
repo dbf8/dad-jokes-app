@@ -11,16 +11,15 @@ This is a dad joke app. It has the following:
 * User Authentication (sign up page, sign in page)
 * Association: my jokes are my jokes! (which User made what joke)
 
-
 ## User Stories
 
-"As a (Something)  I want to (something) so I can (something else)
+"As a (Something) I want to (something) so I can (something else)
 
 * As a User, I want to create and save a joke, so I can keep track of my jokes.
 * As a User, I want to edit a joke, so I can fix my joke.
 * As a User, I want to delete a joke so I can remove it.
 * As a User, I want to view my jokes.
-<!-- * As a User, I want to be able to thumbs up or thumbs down jokes -->
+  <!-- * As a User, I want to be able to thumbs up or thumbs down jokes -->
 * As a viewer, I want to be able to only view jokes and do nothing else.
 * As a user, I want to create an account so I can start posting and saving jokes
 * As a user, I want to sign in with my account, so I can keep adding jokes
@@ -28,24 +27,48 @@ This is a dad joke app. It has the following:
 
 ## MVP
 
-- ability to create/add jokes
-- ability to view the jokes
-- homepage with feed of jokes
+* ability to create/add jokes
+* ability to view the jokes
+* homepage with feed of jokes
 
 ## Bronze
 
-- ability to create account to sign in
-- associated jokes to users
-- edit your jokes
+* ability to create account to sign in
+* associated jokes to users
+* edit your jokes
 
 ## Silver
 
-- ability to delete jokes
-- user profile showing their jokes
-- homepage w/ a feed of jokes
+* ability to delete jokes
+* user profile showing their jokes
+* homepage w/ a feed of jokes
 
 ## Gold
 
-- commenting on jokes
-- tagging
-- 
+* commenting on jokes
+* tagging
+
+# super small steps
+
+1.  run npm init -y
+2.  npm install --save express (or now just npm install express)
+3.  touch index.js
+4.  inside index.js at it's most simple
+
+```
+// require all our dependencies
+const express = require("express");
+
+// create and set up our express app
+const app = express();
+
+// define a route
+app.get("/", (req, res) => {
+  res.send("Hello Universe!");
+})
+
+// start our server
+app.listen(3000, () => console.log("This is working on port 3000"))
+```
+
+5.  Render a view
