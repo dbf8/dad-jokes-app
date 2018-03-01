@@ -54,21 +54,39 @@ This is a dad joke app. It has the following:
 2.  npm install --save express (or now just npm install express)
 3.  touch index.js
 4.  inside index.js at it's most simple
+    require all our dependencies
 
-```
-// require all our dependencies
-const express = require("express");
+    ````const express = require("express");
+    // create and set up our express app
+    const app = express();
 
-// create and set up our express app
-const app = express();
+    // define a route
+    app.get("/", (req, res) => {
+    res.send("Hello Universe!");
+    })
 
-// define a route
-app.get("/", (req, res) => {
-  res.send("Hello Universe!");
-})
-
-// start our server
-app.listen(3000, () => console.log("This is working on port 3000"))
-```
+    // start our server
+    app.listen(3000, () => console.log("This is working on port 3000" ```
+    ````
 
 5.  Render a view
+    *npm install hbs --save
+    *require the dependency in index.js
+    const hbs = require('hbs')
+    *configure express to use hbs
+    app.set('view engine', 'hbs')
+    *touch a views folder
+    touch layout.hbs
+    touch index.hbs
+    \*render the index view in index.js -> app.get function
+6.  mkdir DB
+    touch db/connection.js
+    npm install mongoose --save
+    in connection.js
+    ````const mongoose = require('mongoose')
+    mongoose.connect('mongodb://localhost/dad_jokes')```
+    create promise: ```mongoose.Promise = Promise```
+    export module so it can be availble globally: module.exports = mongoose
+    ````
+7.
+8.
